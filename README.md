@@ -4,6 +4,12 @@ Sistema web desenvolvido para realizar o cadastro, consulta e gerenciamento de c
 
 Este projeto foi criado com o objetivo de praticar desenvolvimento web, integração com banco de dados e autenticação de usuários, fazendo parte do meu portfólio de projetos.
 
+## 🌐 Projeto online
+
+O sistema está publicado no GitHub Pages e pode ser acessado pelo link abaixo:
+
+👉 [Acessar Sistema de Cadastro de Clientes](https://carolcodestudio.github.io/sistema-cadastro-clientes/)
+
 ## 🚀 Funcionalidades
 
 - Login de usuário com Supabase Authentication
