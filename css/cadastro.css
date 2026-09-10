@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #f5f6fa;
+    overflow: hidden;
+}
+
+/* Reaproveitando a Barra Lateral */
+.sidebar {
+    width: 260px;
+    background: #e91e63;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.menu li.active a,
+.menu li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    font-weight: bold;
+}
+
+/* Área de Conteúdo */
+.main-content {
+    flex: 1;
+    padding: 50px 60px;
+    overflow-y: auto;
+}
+
+.main-content h1 {
+    font-size: 34px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.main-content p {
+    color: #7f8c8d;
+    font-size: 16px;
+    margin-bottom: 45px;
+}
+
+/* Formulário de Cadastro Moderno */
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    max-width: 700px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-group input {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #e91e63;
+}
+
+.btn-cadastrar {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cadastrar:hover {
+    background: #c2185b;
+}

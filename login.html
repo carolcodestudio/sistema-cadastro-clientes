@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CarolCode Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <h1>💻 CarolCode Studio</h1>
+            <h2>Sistema de Cadastro de Clientes</h2>
+            <p>Faça login para acessar o sistema</p>
+
+            <input type="email" id="email" placeholder="Digite seu e-mail">
+
+            <div class="senha-box">
+                <input type="password" id="senha" placeholder="Digite sua senha">
+                <button type="button" class="mostrar" onclick="mostrarSenha()">👁</button>
+            </div>
+
+            <div class="opcoes-extras">
+                <label class="lembrar">
+                    <input type="checkbox"> Lembrar-me
+                </label>
+                <a href="#" class="esqueci">Esqueci minha senha</a>
+            </div>
+
+            <button type="button" onclick="fazerLogin()">Entrar</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</body>
+</html>

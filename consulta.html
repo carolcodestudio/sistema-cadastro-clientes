@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Clientes | CarolCode Studio</title>
+    <link rel="stylesheet" href="css/consulta.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span>💻</span> CarolCode
+        </div>
+        
+        <ul class="menu">
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="cadastro.html">👥 Cadastro</a></li>
+            <li class="active"><a href="consulta.html">🔍 Consulta</a></li>
+            <li><a href="relatorio.html">📄 Relatórios</a></li>
+            <li><a href="login.html">🚪 Sair</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Consultar Clientes</h1>
+        <p>Pesquise, visualize ou gerencie os clientes cadastrados no sistema</p>
+
+        <div class="search-container">
+            <input type="text" id="busca" placeholder="Digite o nome ou e-mail para buscar..." onkeyup="filtrarClientes()">
+        </div>
+
+        <div class="table-container">
+            <table id="tabelaClientes">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    <tr>
+                        <td>Ana Silva</td>
+                        <td>ana.silva@email.com</td>
+                        <td>(11) 98765-4321</td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bruno Souza</td>
+                        <td>bruno.souza@email.com</td>
+                        <td>(21) 99999-8888</td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

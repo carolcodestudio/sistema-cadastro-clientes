@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios | CarolCode Studio</title>
+    <link rel="stylesheet" href="css/relatorio.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span>💻</span> CarolCode
+        </div>
+        
+        <ul class="menu">
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="cadastro.html">👥 Cadastro</a></li>
+            <li><a href="consulta.html">🔍 Consulta</a></li>
+            <li class="active"><a href="relatorio.html">📄 Relatórios</a></li>
+            <li><a href="login.html">🚪 Sair</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Relatórios e Estatísticas</h1>
+        <p>Acompanhe o crescimento e os números da sua base de clientes em tempo real</p>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Total de Clientes</h3>
+                <div class="stat-number" id="totalClientes">0</div>
+                <p>Clientes ativos na base</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Meta Mensal</h3>
+                <div class="stat-number">150</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="barraProgresso" style="width: 0%;"></div>
+                </div>
+                <p id="porcentagemMeta">Progresso: 0%</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
