@@ -20,15 +20,51 @@ function mostrarSenha() {
     }
 }
 
-function fazerLogin() {
+async function fazerLogin() {
+
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
 
-    if (email === 'carol@email.com' && senha === '12345') {
-        alert('Seja bem-vinda, Carol!');
-        window.location.href = "dashboard.html";
-    } else {
-        alert('Ops! E-mail ou senha incorretos.');
+    try {
+
+        const response = await fetch(
+            `${SUPABASE_URL}/auth/v1/token?grant_type=password`,
+            {
+                method: 'POST',
+                headers: {
+                    "apikey": SUPABASE_KEY,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: senha
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        if (response.ok) {
+
+            alert('Login realizado com sucesso! 🎉');
+            window.location.href = "dashboard.html";
+
+        } else {
+
+            alert(
+                'E-mail ou senha incorretos.'
+            );
+
+            console.error(data);
+        }
+
+    } catch (error) {
+
+        console.error("Erro no login:", error);
+
+        alert(
+            'Erro de conexão ao tentar fazer login.'
+        );
     }
 }
 
