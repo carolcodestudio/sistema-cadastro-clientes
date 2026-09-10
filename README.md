@@ -64,7 +64,21 @@ O Dashboard apresenta informações obtidas diretamente do banco de dados, inclu
 
 ## 📸 Demonstração
 
-Em breve serão adicionadas imagens das principais telas do sistema.
+### 🔐 Tela de Login
+
+![Tela de Login](img/login.png)
+
+### 📊 Dashboard
+
+![Dashboard](img/dashboard.png)
+
+### 👤 Cadastro de Clientes
+
+![Cadastro de Clientes](img/cadastro.png)
+
+### 🔎 Consulta de Clientes
+
+![Consulta de Clientes](img/consulta.png)
 
 ## 🎯 Objetivo do projeto
 
