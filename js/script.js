@@ -313,13 +313,21 @@ document.addEventListener(
                                             "return=minimal"
                                     },
 
-                                    body:
-                                        JSON.stringify({
-                                            nome: nome,
-                                            email: email,
-                                            telefone:
-                                                telefone
-                                        })
+                                    body: JSON.stringify({
+                                        nome: nome,
+                                        email: email,
+                                        telefone: telefone,
+                                        user_id: (await fetch(
+                                            `${SUPABASE_URL}/auth/v1/user`,
+                                            {
+                                                method: 'GET',
+                                                headers: {
+                                                     "apikey": SUPABASE_KEY,
+                                                     "Authorization": `Bearer ${token}`
+                                                }
+                                            }
+    ).then(r => r.json())).id
+})
                                 }
                             );
 
