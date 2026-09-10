@@ -1,47 +1,77 @@
-# 👥 Sistema de Cadastro de Clientes
+# 💻 Sistema de Cadastro de Clientes | CarolCode Studio
 
-Projeto desenvolvido para praticar meus conhecimentos em desenvolvimento web e organização de um sistema de cadastro de clientes.
+Sistema web desenvolvido para realizar o cadastro, consulta e gerenciamento de clientes de forma simples e organizada.
 
-O sistema possui diferentes telas que simulam funcionalidades utilizadas no gerenciamento de clientes, permitindo praticar a criação de interfaces, formulários e navegação entre páginas.
+Este projeto foi criado com o objetivo de praticar desenvolvimento web, integração com banco de dados e autenticação de usuários, fazendo parte do meu portfólio de projetos.
 
 ## 🚀 Funcionalidades
 
-- Tela de login
-- Dashboard
+- Login de usuário com Supabase Authentication
+- Controle de sessão do usuário
+- Proteção das páginas internas
+- Logout do sistema
 - Cadastro de clientes
-- Consulta de clientes
-- Relatórios
-- Navegação entre as páginas do sistema
+- Consulta de clientes cadastrados
+- Pesquisa de clientes
+- Exclusão de clientes
+- Dashboard com dados atualizados do banco
+- Total de clientes cadastrados
+- Quantidade de cadastros realizados no dia
+- Acompanhamento da meta de clientes
+- Relatório de clientes
 
-## 💻 Tecnologias utilizadas
+## 🛠️ Tecnologias utilizadas
 
 - HTML5
 - CSS3
 - JavaScript
+- Supabase
+- Supabase Authentication
+- Supabase Database
 - Git
 - GitHub
+- Visual Studio Code
 
-## 📁 Estrutura do projeto
+## 📄 Páginas do sistema
 
-O projeto está organizado em páginas HTML separadas, arquivos CSS para estilização das telas e JavaScript para as funcionalidades e interações.
+O projeto possui as seguintes páginas:
+
+- `login.html` — acesso ao sistema
+- `dashboard.html` — painel principal
+- `cadastro.html` — cadastro de clientes
+- `consulta.html` — consulta e gerenciamento de clientes
+- `relatorio.html` — visualização dos relatórios
+
+## 🔐 Autenticação
+
+O sistema utiliza o Supabase Authentication para validar o login do usuário.
+
+Após a autenticação, a sessão é utilizada para controlar o acesso às páginas internas. Caso o usuário não possua uma sessão válida, ele é redirecionado para a página de login.
+
+## ☁️ Banco de dados
+
+Os dados dos clientes são armazenados no Supabase.
+
+O sistema realiza operações de cadastro, consulta e exclusão utilizando JavaScript e a API REST do Supabase.
+
+## 📊 Dashboard
+
+O Dashboard apresenta informações obtidas diretamente do banco de dados, incluindo:
+
+- Total de clientes
+- Cadastros realizados no dia
+- Progresso da meta de clientes
+
+## 📸 Demonstração
+
+Em breve serão adicionadas imagens das principais telas do sistema.
 
 ## 🎯 Objetivo do projeto
 
-Este projeto foi desenvolvido como parte dos meus estudos em programação, com o objetivo de colocar em prática conceitos de desenvolvimento web e também aprender a utilizar Git e GitHub para versionamento e publicação dos meus projetos.
+Este projeto foi desenvolvido para colocar em prática conhecimentos de desenvolvimento web e demonstrar habilidades com HTML, CSS, JavaScript, banco de dados, autenticação e controle de versão.
 
-## 📚 Aprendizados
+## 👩‍💻 Desenvolvido por
 
-Durante o desenvolvimento deste projeto, pude praticar:
+**CarolCode Studio**
 
-- Estruturação de páginas com HTML
-- Estilização utilizando CSS
-- Uso de JavaScript
-- Organização de arquivos de um projeto
-- Versionamento com Git
-- Publicação de projetos no GitHub
-
-## 👩‍💻 Autora
-
-Desenvolvido por **Caroline | CarolCode Studio**
-
-Projeto criado para fins de estudo e desenvolvimento do meu portfólio profissional.
+Projeto desenvolvido para fins de estudo e portfólio.
