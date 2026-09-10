@@ -1,50 +1,52 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     background: #f5f6fa;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.login-container{
+.login-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 
-.login-card{
+.login-card {
     width: 420px;
     background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
-.login-card h1{
+.login-card h1 {
     color: #e91e63;
     margin-bottom: 10px;
 }
 
-.login-card h2{
+.login-card h2 {
     color: #555;
     font-size: 22px;
     margin-bottom: 15px;
 }
 
-.login-card p{
+.login-card p {
     color: #777;
     margin-bottom: 25px;
 }
 
-.login-card input{
+/* Campo de e-mail */
+.login-card > input[type="email"] {
     width: 100%;
     padding: 14px;
     margin-bottom: 15px;
@@ -55,22 +57,125 @@ body{
     transition: 0.3s;
 }
 
-.login-card input:focus{
+.login-card > input[type="email"]:focus {
     border-color: #e91e63;
 }
 
-.login-card button{
+/* Caixa da senha */
+.senha-box {
+    position: relative;
     width: 100%;
-    padding: 14px;
-    background: #e91e63;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 17px;
-    cursor: pointer;
-    transition: .3s;
+    margin-bottom: 15px;
 }
 
-.login-card button:hover{
+.senha-box input {
+    width: 100%;
+    padding: 14px 50px 14px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.senha-box input:focus {
+    border-color: #e91e63;
+}
+
+/* Botão do olho */
+.login-card .mostrar {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: auto;
+    padding: 5px;
+
+    background: transparent;
+    color: #777;
+    border: none;
+
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-card .mostrar:hover {
+    background: transparent;
+    color: #e91e63;
+}
+
+/* Lembrar-me e esqueci minha senha */
+.opcoes-extras {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.lembrar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+}
+
+.login-card .lembrar input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.esqueci {
+    color: #e91e63;
+    text-decoration: none;
+}
+
+.esqueci:hover {
+    text-decoration: underline;
+}
+
+/* Botão Entrar */
+.login-card > button {
+    width: 100%;
+    padding: 14px;
+
+    background: #e91e63;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-card > button:hover {
     background: #c2185b;
+}
+
+/* Ajuste para celular */
+@media (max-width: 500px) {
+
+    .login-card {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .login-card h1 {
+        font-size: 26px;
+    }
+
+    .login-card h2 {
+        font-size: 19px;
+    }
+
+    .opcoes-extras {
+        font-size: 13px;
+    }
 }
