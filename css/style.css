@@ -179,3 +179,61 @@ body {
         font-size: 13px;
     }
 }
+/* ======================================
+   PÁGINA DE CRIAÇÃO DE CONTA
+====================================== */
+
+.login-card #formRegistro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.login-card #formRegistro input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.login-card #formRegistro input:focus {
+    border-color: #f50057;
+}
+
+.login-card #formRegistro button {
+    width: 100%;
+    padding: 14px;
+    background-color: #f50057;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.login-card #formRegistro button:hover {
+    background-color: #d9004d;
+}
+
+.login-card .criar-conta {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.login-card .criar-conta a {
+    color: #f50057;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-card .criar-conta a:hover {
+    text-decoration: underline;
+}
