@@ -877,3 +877,69 @@ async function carregarDashboard() {
         }
     }
 }
+
+ // ==========================================
+ // CADASTRO DE NOVOS USUÁRIOS
+ // ==========================================
+
+async function registrarUsuario(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('emailRegistro').value.trim();
+    const senha = document.getElementById('senhaRegistro').value;
+    const confirmarSenha = document.getElementById('confirmarSenha').value;
+
+    if (senha !== confirmarSenha) {
+        alert('As senhas não coincidem.');
+        return;
+    }
+
+    if (senha.length < 8) {
+        alert('A senha precisa ter pelo menos 8 caracteres.');
+        return;
+    }
+
+    const botao = document.querySelector('#formRegistro button[type="submit"]');
+    botao.disabled = true;
+    botao.textContent = 'Criando conta...';
+
+    try {
+        const response = await fetch(
+            `${SUPABASE_URL}/auth/v1/signup`,
+            {
+                method: 'POST',
+                headers: {
+                    'apikey': SUPABASE_KEY,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: senha
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.msg || data.message || 'Não foi possível criar a conta.');
+        }
+
+        alert('Solicitação recebida! Se o endereço puder ser cadastrado, você receberá um e-mail de confirmação. Verifique também a caixa de spam.');
+
+        document.getElementById('formRegistro').reset();
+
+    } catch (error) {
+        console.error('Erro no cadastro:', error);
+        alert('Não foi possível concluir o cadastro: ' + error.message);
+    } finally {
+        botao.disabled = false;
+        botao.textContent = 'Criar conta';
+    }
+}
+
+const formRegistro = document.getElementById('formRegistro');
+
+if (formRegistro) {
+    formRegistro.addEventListener('submit', registrarUsuario);
+}

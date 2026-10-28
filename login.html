@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,25 +15,52 @@
             <h2>Sistema de Cadastro de Clientes</h2>
             <p>Faça login para acessar o sistema</p>
 
-            <input type="email" id="email" placeholder="Digite seu e-mail">
+            <input
+                type="email"
+                id="email"
+                placeholder="Digite seu e-mail"
+                autocomplete="email"
+            >
 
             <div class="senha-box">
-                <input type="password" id="senha" placeholder="Digite sua senha">
-                <button type="button" class="mostrar" onclick="mostrarSenha()">👁</button>
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                >
+                <button
+                    type="button"
+                    class="mostrar"
+                    onclick="mostrarSenha()"
+                >👁</button>
             </div>
 
             <div class="opcoes-extras">
                 <label class="lembrar">
                     <input type="checkbox"> Lembrar-me
                 </label>
-                <a href="#" class="esqueci">Esqueci minha senha</a>
+
+                <a href="#" class="esqueci">
+                    Esqueci minha senha
+                </a>
             </div>
 
-            <button type="button" onclick="fazerLogin()">Entrar</button>
+            <button type="button" onclick="fazerLogin()">
+                Entrar
+            </button>
+
+            <!-- Cadastro de novos usuários -->
+            <p class="criar-conta">
+                Ainda não tem uma conta?
+                <a href="registrar.html">Criar uma conta</a>
+            </p>
+
         </div>
     </div>
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 </body>
 </html>

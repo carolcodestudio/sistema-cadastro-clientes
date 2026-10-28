@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta | CarolCode Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <h1>💻 CarolCode Studio</h1>
+            <h2>Criar uma conta</h2>
+            <p>Cadastre-se para utilizar o sistema</p>
+
+            <form id="formRegistro">
+                <input
+                    type="email"
+                    id="emailRegistro"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="senhaRegistro"
+                    placeholder="Crie uma senha"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    placeholder="Confirme sua senha"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <button type="submit">Criar conta</button>
+            </form>
+
+            <p class="criar-conta">
+                Já tem uma conta?
+                <a href="login.html">Fazer login</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
